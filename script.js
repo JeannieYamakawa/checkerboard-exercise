@@ -22,14 +22,22 @@ var numOfTiles = width * length;
 
 function createBoard (){
     var color = ''
+    var red = 128
+    var green = 128
+    var blue = 128
     for (var i =0; i<numOfTiles; i++){
-            var randomRed = Math.floor(Math.random()*255);
-            var randomGreen = Math.floor(Math.random()*255);
-            var randomBlue = Math.floor(Math.random()*255);
-            var colorString = "rgb("+ randomRed + ","+ randomGreen + "," + randomBlue+ ")";
-            color = colorString
-            createTile(color)
+            var red = 128+i;
+            var blue = 128+i;
+            var green = 128-i;
+            if(i%2===0){
+            var colorString = "rgb("+ (20+red) + ","+ (30+green) + "," + (90+blue)+ ")";
+            createTile(colorString)
         }
+            else{
+            var colorString = "rgb("+ red + ","+ green + "," + blue+ ")";
+            createTile(colorString)
+        }
+    }
 }
 
 createBoard()
