@@ -1,8 +1,3 @@
-// Each tile should be a div
-// Each tile's width is 11.1%
-// Set each tile's float property to left
-// Each tile's paddingBottom is 11.1%
-
 function createTile(color) {
 
     var newDiv = document.createElement( "div" );
@@ -35,4 +30,17 @@ function createBoard (){
 createBoard()
 
 
-//"rgb(255, 0, 0)""
+
+
+function flashing(){
+    for (var i = 0; i<document.getElementsByTagName("div").length; i++){
+        var randomRed = Math.floor(Math.random()*255);
+        var randomGreen = Math.floor(Math.random()*255);
+        var randomBlue = Math.floor(Math.random()*255);
+        var myDivs = document.getElementsByTagName("div")
+        myDivs[i].style.backgroundColor = "rgb("+ randomRed + ","+ randomGreen + "," + randomBlue+ ")";
+    }
+}
+
+
+setInterval(flashing, 2000);
