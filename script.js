@@ -1,8 +1,3 @@
-// Each tile should be a div
-// Each tile's width is 11.1%
-// Set each tile's float property to left
-// Each tile's paddingBottom is 11.1%
-
 function createTile(color) {
 
     var newDiv = document.createElement( "div" );
@@ -30,7 +25,7 @@ function createBoard (){
             var blue = 128+i;
             var green = 128-i;
             if(i%2===0){
-            var colorString = "rgb("+ (20+red) + ","+ (30+green) + "," + (90+blue)+ ")";
+            var colorString = "rgb("+ (10+red) + ","+ (120+green) + "," + (150+blue)+ ")";
             createTile(colorString)
         }
             else{
@@ -41,6 +36,3 @@ function createBoard (){
 }
 
 createBoard()
-
-
-//"rgb(255, 0, 0)""
